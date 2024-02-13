@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <img id="initial-image" src="escalera.jpg" alt="Imagen inicial">
+    <img id="initial-image" src="empanadilla.png" alt="Imagen inicial">
     
     <div id="password-form">
         <h2>Introduce la contraseña:</h2>
@@ -35,7 +35,7 @@
         </form>
     </div>
 
-    <img id="final-image" src="villar.webp" alt="Imagen final" >
+    <img id="final-image" src="fin.png" alt="Imagen final" >
 
     <script>
         function checkPassword() {
@@ -43,7 +43,7 @@
             
             // Aquí puedes comparar la contraseña ingresada con la contraseña correcta
             // Si es correcta, muestra la segunda imagen
-            if (password === '1') {
+            if (password === 'empanadilla') {
                 document.getElementById('password-form').style.display = 'none';
                 document.getElementById('final-image').style.display = 'block';
             } else {
