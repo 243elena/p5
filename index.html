@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Protegida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #password-form {
+            display: block;
+        }
+        #initial-image {
+            
+            max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+        }
+        #final-image {
+            display: none;
+            margin: 0 auto;
+            max-width: 100%; /* Ajusta el tamaño máximo de la imagen al ancho del contenedor */
+        }
+    </style>
+</head>
+<body>
+    <img id="initial-image" src="escalera.jpg" alt="Imagen inicial">
+    
+    <div id="password-form">
+        <h2>Introduce la contraseña:</h2>
+        <form onsubmit="checkPassword(); return false;">
+            <input type="password" id="password" required>
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+
+    <img id="final-image" src="villar.webp" alt="Imagen final" >
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+            
+            // Aquí puedes comparar la contraseña ingresada con la contraseña correcta
+            // Si es correcta, muestra la segunda imagen
+            if (password === '1') {
+                document.getElementById('password-form').style.display = 'none';
+                document.getElementById('final-image').style.display = 'block';
+            } else {
+                alert('Contraseña incorrecta. Intenta de nuevo.');
+            }
+        }
+    </script>
+</body>
+</html>
